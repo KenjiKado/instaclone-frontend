@@ -1,0 +1,27 @@
+.header {
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid var(--light-grey);
+	padding: 18px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper {
+	max-width: 930px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.icon {
+	margin-left: 15px;
+}
+
+.container {
+	max-width: 930px;
+	width: 100%;
+	margin: 45px auto 0;
+}

@@ -1,0 +1,20 @@
+:root {
+	--light-grey: #dbdbdb;
+	--light-blue: #0095f6;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fafafa;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #2c2c2c;
+}
+
+a {
+	color: var(--light-blue);
+	text-decoration: none;
+}

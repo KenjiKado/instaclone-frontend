@@ -1,0 +1,30 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.input {
+	width: 100%;
+	padding: 8px 7px;
+	background-color: #fafafa;
+	border: 0.5px solid var(--light-grey);
+	margin-top: 5px;
+	box-sizing: border-box;
+	border-radius: 5px;
+
+	&::placeholder {
+		font-size: 12px;
+	}
+
+	&:focus,
+	&:focus-visible {
+		border: 1px solid rgba(#0095f6, 0.7);
+		outline: none;
+	}
+
+	&.error {
+		border-color: #ff6347;
+	}
+}

@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useReactiveVar } from "@apollo/client";
+import {
+	Routes,
+	Route,
+	Navigate,
+} from "react-router-dom";
+import { ROUTES } from "./constants/routes";
+import Home from "./pages/Home";
+import LoginPage from "./pages/Auth/Login";
+import RegistrationPage from "./pages/Auth/Registration";
+import { isAuthVar } from "./apollo/token";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	const isAuth = useReactiveVar(isAuthVar);
+
+	return (
+		<Routes>
+			<Route path={ROUTES.HOME} element={
+				isAuth ? <Home /> : <LoginPage />
+			} />
+			<Route path={ROUTES.SIGN_UP} element={
+				isAuth ? <Navigate to={ROUTES.HOME} replace /> : <RegistrationPage />
+			} />
+			<Route path="*" element={
+				<Navigate to={ROUTES.HOME} replace />
+			} />
+		</Routes>
+	);
 }
 
 export default App;

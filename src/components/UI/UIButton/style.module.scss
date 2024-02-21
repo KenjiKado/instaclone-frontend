@@ -1,0 +1,35 @@
+.btn {
+	text-align: center;
+	border: none;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.default {
+	width: 100%;
+	padding: 8px 0px;
+	margin-top: 15px;
+	background-color: #0095f6;
+	border-radius: 5px;
+	color: white;
+}
+
+.link {
+	background-color: transparent;
+	color: #0095f6
+}
+
+.disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.loading {
+	opacity: 0.5;
+	color: transparent;
+	cursor: default;
+}
+
+.loading>* {
+	display: none;
+}

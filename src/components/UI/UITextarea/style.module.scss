@@ -1,0 +1,31 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.textarea {
+	width: 100%;
+	padding: 8px 7px;
+	background-color: #fafafa;
+	border: 0.5px solid var(--light-grey);
+	margin-top: 5px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	resize: none;
+	overflow-y: auto;
+
+	&::placeholder {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+	}
+
+	&:focus,
+	&:focus-visible {
+		border: none;
+		outline: none;
+	}
+}

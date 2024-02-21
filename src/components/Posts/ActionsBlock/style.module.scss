@@ -1,0 +1,28 @@
+.actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	div {
+		display: flex;
+		align-items: center;
+	}
+
+	svg {
+		font-size: 20px;
+	}
+}
+
+.actionsBlock {
+	display: flex;
+
+	span {
+		display: block;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+
+	.likeIconFilled {
+		color: #ed4956;
+	}
+}
